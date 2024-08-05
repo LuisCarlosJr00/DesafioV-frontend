@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function fetchCities() {
   try {
-    const response = await fetch("http://localhost:3000/api/destinations");
+    const response = await fetch("https://desafiov-backend.onrender.com/api/destinations");
     const cities = await response.json();
     displayCities(cities);
   } catch (error) {
@@ -34,7 +34,7 @@ function displayCities(cities) {
 async function fetchAttractions(cityId) {
   try {
     const response = await fetch(
-      `http://localhost:3000/api/attractions?destination_id=${cityId}`
+      `https://desafiov-backend.onrender.com/api/attractions?destination_id=${cityId}`
     );
     const attractions = await response.json();
     displayAttractions(attractions);
